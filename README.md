@@ -53,7 +53,7 @@ cd remote-shutdown-web
 
 
 
-### ** Acceder a la web**
+### **Acceder a la web**
 - Abre el navegador y entra a:  
   ```
   http://69.55.60.119
