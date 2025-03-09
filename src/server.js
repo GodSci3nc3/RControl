@@ -1,16 +1,18 @@
 const express = require("express");
 const session = require("express-session");
 const { login } = require("./controllers/authController");
+const { apagarComputador, programarApagado, estadoComputador } = require("./controllers/sshController");
 
 const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 app.use(session({ secret: "clave_secreta", resave: false, saveUninitialized: true }));
 
-// Ruta de autenticación por contraseña (sin OTP)
 app.post("/login", login);
 
-// No se necesita la ruta /verificar-otp por ahora
+app.post("/ssh/apagar", apagarComputador);
+app.post("/ssh/programar-apagado", programarApagado);
+app.get("/ssh/estado", estadoComputador);
 
 const PORT = 3000;
 app.listen(PORT, () => {
