@@ -10,29 +10,12 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
     const data = await response.json();
     if (response.ok) {
-        mostrarModal();
+        window.location.href = "/dashboard.html"; 
     } else {
-        alert(data.error);
-    }
-});
-
-function mostrarModal() {
-    document.getElementById("otpModal").style.display = "flex";
-}
-
-document.getElementById("verifyOtpBtn").addEventListener("click", async () => {
-    const otp = document.getElementById("otpInput").value;
-
-    const response = await fetch("/verificar-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ otp })
-    });
-
-    const data = await response.json();
-    if (response.ok) {
-        window.location.href = "/dashboard.html";
-    } else {
-        alert("Código OTP incorrecto.");
+        errorMessage.textContent = data.error; 
+        errorMessage.style.display = "block"; 
+        setTimeout(() => {
+            errorMessage.style.display = "none"; 
+        }, 3000);
     }
 });
