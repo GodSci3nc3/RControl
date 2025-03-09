@@ -1,16 +1,18 @@
 const express = require("express");
-const cors = require("cors");
+const session = require("express-session");
+const { login, verificarOTPController } = require("./controllers/authController");
 
 const app = express();
-const PORT = 3000;
-
-app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
+app.use(session({ secret: "clave_secreta", resave: false, saveUninitialized: true }));
 
-app.get("/", (req, res) => {
-    res.send("Servidor express funcionando...");
-});
+// Rutas de autenticación
+app.post("/login", login);
+app.post("/verificar-otp", verificarOTPController);
 
+// Iniciar servidor
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
