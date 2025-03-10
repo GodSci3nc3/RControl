@@ -7,16 +7,48 @@
 </head>
 <body>
     <h2>Panel de Control</h2>
-<label for="pcSelect">Selecciona un computador:</label>
-<select id="pcSelect">
-    <option value="pc1">PC 1</option>
-</select>
-<button id="checkStatusBtn">Verificar Estado</button>
 
-<p id="statusResult">Estado: Desconocido</p>
+    <!-- PC 1 -->
+    <div class="pc-container">
+        <h3>PC 1</h3>
+        <p id="status-pc1">Estado: Desconocido</p>
+        <button class="checkStatusBtn" data-pc="pc1">Verificar Estado</button>
+        <button class="shutdownBtn" data-pc="pc1">Apagar Computador</button>
+        <input type="number" class="minutesInput" placeholder="Minutos para apagado">
+        <button class="scheduleShutdownBtn" data-pc="pc1">Programar Apagado</button>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/dash.js"></script>
+    <!-- PC 2 -->
+    <div class="pc-container">
+        <h3>PC 2</h3>
+        <p id="status-pc2">Estado: Desconocido</p>
+        <button class="checkStatusBtn" data-pc="pc2">Verificar Estado</button>
+        <button class="shutdownBtn" data-pc="pc2">Apagar Computador</button>
+        <input type="number" class="minutesInput" placeholder="Minutos para apagado">
+        <button class="scheduleShutdownBtn" data-pc="pc2">Programar Apagado</button>
+    </div>
 
+    <!-- PC 3 -->
+    <div class="pc-container">
+        <h3>PC 3</h3>
+        <p id="status-pc3">Estado: Desconocido</p>
+        <button class="checkStatusBtn" data-pc="pc3">Verificar Estado</button>
+        <button class="shutdownBtn" data-pc="pc3">Apagar Computador</button>
+        <input type="number" class="minutesInput" placeholder="Minutos para apagado">
+        <button class="scheduleShutdownBtn" data-pc="pc3">Programar Apagado</button>
+    </div>
+
+    <!-- PC 4 -->
+    <div class="pc-container">
+        <h3>PC 4</h3>
+        <p id="status-pc4">Estado: Desconocido</p>
+        <button class="checkStatusBtn" data-pc="pc4">Verificar Estado</button>
+        <button class="shutdownBtn" data-pc="pc4">Apagar Computador</button>
+        <input type="number" class="minutesInput" placeholder="Minutos para apagado">
+        <button class="scheduleShutdownBtn" data-pc="pc4">Programar Apagado</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/dash.js"></script>
 </body>
 </html>
