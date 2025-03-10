@@ -6,25 +6,76 @@
     <link rel="stylesheet" href="styles.css">
     <title>RControl | Inicia sesión</title>
 </head>
-<body>
-    <h2>RControl</h2>
-    <div id="errorMessage" class="error-message" style="display: none; background-color: #ff4d4d; width: fit-content; padding: 5px;">Contraseña incorrecta</div>
-    <form id="loginForm">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Iniciar sesión</button>
-    </form>
+<body class="login-body">
+    <div class="login-content"></div>
+        <center>
+            <!-- Titulo del cuerpo -->
+            <h2 class="title-text">RControl</h2>
 
-    <div id="otpModal" class="modal" style="display: none;">
-        <div class="modalContent">
-            <h3>Verificación OTP</h3>
-            <p>Se ha enviado un código a tu correo. Ingresa el código OTP:</p>
-            <input type="text" id="otpInput" placeholder="Código OTP">
-            <button id="verifyOtpBtn">Verificar</button>
-        </div>
-    </div>
+            <!-- Cajita gris que contiene la informacion en referencia al diseño de banani -->
+             <div class="gray-box">
+                
+                <!-- Contenido de la caja gris -->
+                <div class="gray-box-content">
+
+                    <!-- Titulo de la caja gris -->
+                    <h3 class="gray-title-text">Iniciar Sesión</h3>
+
+                    <!-- Parrafo sencillo de la caja gris -->
+                    <p class="gray-box-paragraph">Ingresa tu contraseña para acceder al sistema.</p>
+
+                </div>                
+             </div>
+
+            <br>
+            <br>
 
 
-    <script src="/js/auth.js"></script>
+            <div id="errorMessage" class="error-message" style="display: none; background-color: #ff4d4d; width: fit-content; padding: 5px;">Contraseña incorrecta</div>
+            
+
+            <!-- Caja del campo de la contraseña -->
+            <div class="password-box">
+
+                <!-- Formulario de la contraseña -->
+                <form id="loginForm">
+
+                    <!-- Texto que contiene el label de contraseña -->
+                    <div class="contrasena-text">
+                        <label for="password" class="password-text">Contraseña</label>
+                    </div>
+                    
+                    <!-- El campo donde el usuario escribe su contraseña -->
+                    <input type="password" id="password" class="password-prompt" required placeholder="Ingresa tu contraseña">
+
+                    <br>
+                    <br>
+
+                    <!-- Botón de submit -->
+                    <button type="submit" class="submit-button">Iniciar sesión</button>
+                    
+                </form>
+            </div>
+
+            <br>
+            <br>
+            
+            <!-- Link de no recordar contraseña -->
+            <a href="" class="forgot-password-text">No recuerdas la contraseña?</a>
+
+            
+
+            <div id="otpModal" class="modal" style="display: none;">
+                <div class="modalContent">
+                    <h3>Verificación OTP</h3>
+                    <p>Se ha enviado un código a tu correo. Ingresa el código OTP:</p>
+                    <input type="text" id="otpInput" placeholder="Código OTP">
+                    <button id="verifyOtpBtn">Verificar</button>
+                </div>
+            </div>
+        <script src="/js/auth.js"></script>
+    </center>
+</div>
+    
 </body>
 </html>

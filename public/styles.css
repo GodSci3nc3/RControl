@@ -1,3 +1,134 @@
+
+/* Configuraciones del cuerpo de la pestaña login */
+.login-body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Posicion del contenido del cuerpo (Aplicar Margen de 10 de la altura del viewport) */
+.login-content{
+    margin-top: 10vh;
+}
+
+/* Titulo de la pestaña login */
+.title-text{
+    user-select: none;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: #3295ff;
+}
+
+/* Caja gris transparente en referencia a banani */
+.gray-box{
+    background-color: #bab4d046;
+    border-radius: 15px;
+    width: 20vw;
+    height: 18vh;
+}
+
+/* Diseño del contenido de la caja gris */
+.gray-box-content{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-flow: column;
+}
+
+/* Diseño del titulo de la caja gris */
+.gray-title-text{
+    user-select: none;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+/* Diseño del parrafo de la caja gris */
+.gray-box-paragraph{
+    margin: 0px;
+    user-select: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #858585;
+}
+
+/* Caja que contiene a la contraseña */
+.password-box{
+    display: flex;
+    width: 20vw;
+    height: 12vh;
+    flex-flow: column;
+}
+
+
+/* Titulo de la contraseña */
+.contrasena-text{
+    user-select: none;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Campo donde escribes en la contraseña */
+.password-prompt{
+    width: 98%;
+    height: 25px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+/* Boton de submit */
+.submit-button{
+    user-select: none;
+    border: none;
+    border-radius: 7px;
+    background: none;
+    margin-top: 5px;
+    width: 98%;
+    height: 4.5vh;
+    color: white;
+    font-weight: 500;
+    background-color: #3295ff;
+    transition: 0.3s all;
+    box-shadow: 3px 3px 2px #b6d9ff;
+}
+
+/* Boton de submit [Cuando le haces hover] */
+.submit-button:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* Campo donde escribes la contraseña [Cuando le haces focus] */
+.password-prompt:focus{
+    outline: 2px solid black;
+}
+
+/* Texto del link de forgot password */
+.forgot-password-text{
+    text-decoration: none;
+    font-size: 15px;
+    color: #3295ff;
+    transition: 0.3s all;
+}
+
+/* Texto del link de forgot password [Cuando le haces hover] */
+.forgot-password-text:hover{
+    opacity: 0.5;
+}
+
+.forgot-password-text:visited{
+    color: #3295ff;
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+
 .modal {
     display: none; 
     position: fixed;
