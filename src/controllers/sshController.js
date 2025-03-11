@@ -12,7 +12,7 @@ const apagarComputador = (req, res) => {
     if (!COMPUTADORES[pc]) return res.status(400).json({ error: "PC no válida" });
 
     const { usuario, puerto } = COMPUTADORES[pc];
-    exec(`ssh -p ${puerto} ${usuario}@localhost "shutdown -h now"`, (error, stdout, stderr) => {
+    exec(`ssh -p ${puerto} ${usuario}@localhost "sudo shutdown -h now"`, (error, stdout, stderr) => {
         if (error) return res.status(500).json({ error: `Error al apagar ${pc}: ${stderr}` });
         res.json({ mensaje: `Orden de apagado enviada a ${pc}` });
     });
