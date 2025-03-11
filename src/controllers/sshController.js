@@ -4,7 +4,7 @@ const COMPUTADORES = {
     pc1: { usuario: "arthur", puerto: 2222 },
     pc2: { usuario: "mauricio-manzur", puerto: 2223 },
     pc3: { usuario: "palow", puerto: 2224 },
-    pc4: { usuario: "root", puerto: 2225 }
+    pc4: { usuario: "chuwi", puerto: 2225 }
 };
 
 const apagarComputador = (req, res) => {
