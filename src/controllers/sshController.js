@@ -2,8 +2,8 @@ const { exec } = require("child_process");
 
 const COMPUTADORES = {
     pc1: { usuario: "arthur", puerto: 2222 },
-    pc2: { usuario: "root", puerto: 2223 },
-    pc3: { usuario: "root", puerto: 2224 },
+    pc2: { usuario: "mauricio-manzur", puerto: 2223 },
+    pc3: { usuario: "palow", puerto: 2224 },
     pc4: { usuario: "root", puerto: 2225 }
 };
 
