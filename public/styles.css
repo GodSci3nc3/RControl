@@ -1,7 +1,8 @@
 
-/* Afecta ambas pestañas de toda la pagina */
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  "Signika", sans-serif;
     margin: 0px;
     user-select: none;
     padding: 0px;
@@ -20,10 +21,12 @@
     margin: 0px;
     margin-bottom: 10px;
     color: #3295ff;
+    transition: all 0.3s;
 }
 
 /* Caja gris transparente en referencia a banani */
 .gray-box{
+    transition: all 0.3s;
     background-color: #bab4d046;
     border-radius: 15px;
     width: 20vw;
@@ -58,6 +61,7 @@
 
 /* Caja que contiene a la contraseña */
 .password-box{
+    transition: all 0.3s;
     display: flex;
     width: 20vw;
     height: 12vh;
@@ -132,8 +136,6 @@
 
 
 /* ---------------------------- MANAGEMENT PAGE ------------------------------- */ 
-
-
 /* Configruaciones del cuerpo de la pestaña Management */
 .management-content{
     margin-top: 4vh;
@@ -164,7 +166,8 @@
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 50vh;
+    transition: all 0.3s;
+    height: 250px;
 }
 
 /* Contenedor de cada pc */
@@ -173,7 +176,7 @@
     display: flex;
     border-radius: 30px;
     margin-left: 3.8%;
-    height: 65%;
+    height: 100%;
     transition: all 0.3s;
     background-color: #bab4d046;
     
@@ -184,6 +187,8 @@
 .container-pc-content{
     width: 100%;
     margin: 10px;
+    transition: all 0.3s;
+
 }
 
 /* Contenedor que tendrá el logo visual de la laptop */
@@ -191,15 +196,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: 35%;
+    width: 50px;
+    height: 50px;
     background-color: #b39ef730;
     border-radius: 100%;
 }
 
 /* Logo visual de la laptop */
 .container-pc-logo-image i{
-    font-size: 50px;
+    font-size: 20px;
     color: #3295ff;
 }
 
@@ -211,6 +216,7 @@
 
 /* Texto del nombre de la pc */
 .pc-name-text{
+    margin-top: 10px;
     font-size: 30px;
     margin-left: 5%;
 }
@@ -226,16 +232,38 @@
 .pc-button{
     margin-top: 7%;
     margin-left: 20px;
-    font-size: 15px;
-    height: 55px;
+    font-size: 10px;
+    height: 40px;
     transition: all 0.3s;
     font-weight: 600;
-    padding: 1px 5%;
+    padding: 1px 5px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
     border: none;
 }
+
+/* Botones de la parte final de la pagina. */
+.pc-btn-end{
+    margin-top: 7%;
+    margin-left: 20px;
+    font-size: 10px;
+    height: 40px;
+    transition: all 0.3s;
+    font-weight: 600;
+    padding: 1px 5px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Botones de la parte final de la pagina .[Cuando les hace hover] */
+.pc-btn-end:hover{
+    opacity: 0.5;
+}
+
+
 
 
 /* Este estilo adicional pertenece al boton que se llama Gestionar */
@@ -248,6 +276,7 @@
 
 /* Este estilo adicional pertenece al boton que se llama Detalles */
 .details{
+    padding: 1px 20px;
     background-color: #b39ef730;
     color: #3295ff;
 }
@@ -282,6 +311,74 @@
 }
 
 
+
+/* MEDIA QUERIES */
+/* Cuando la pantalla toque 1220px cuando disminuya [MANAGEMENT PAGE]*/
+@media screen and (max-width: 1220px) {
+    .pc-button{
+        margin-top: 3%;
+        padding: 1px 7px;
+    }
+    
+}
+
+/* Cuando la pantalla toque 1106px cuando disminuya [MANAGEMENT PAGE]*/
+@media screen and (max-width: 1106px){
+    .computer-status-container{
+        height: 40vh;
+    }
+
+    .pc-button{
+        padding: 1px 30px;
+    }
+}
+
+/* Cuando la pantalla toque 895px cuando disminuya [MANAGEMENT PAGE]*/
+@media screen and (max-width: 895px){
+
+    .pc-button{
+        padding: 1px 10px;
+    }
+
+}
+
+/* Cuando la pantalla toque 744px cuando disminuya [MANAGEMENT PAGE]*/
+@media screen and (max-width: 744px){
+    .computer-status-container{
+        align-items: center;
+        height: 100%;
+        flex-flow: column wrap;
+    }
+
+    #container-pc{
+        width: 80%;
+        margin-top: 20px;
+    }
+
+}
+
+/* Cuando la pantalla toque 677px cuando disminuya [LOGIN PAGE] */
+@media screen and (max-width: 677px) {
+    .gray-box{
+        width: 45vw;
+
+    }
+    
+    .title-text{
+        font-size: 40px;
+    }
+
+    .password-box{
+        width: 40vw;
+    }
+}
+
+/* Cuando la pantalla toque 450px cuando disminuya [LOGIN PAGE] */
+@media screen and (max-width:449px){
+    .password-box{
+        width: 50vw;
+    }
+}
 
 /* ------------------------------------------------------------------------- */
 
