@@ -3,20 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">>
+    <link rel="stylesheet" href="styles.css">
     <title>Dashboard</title>
 </head>
-<body>
-    <h2>Panel de Control</h2>
-<label for="pcSelect">Selecciona un computador:</label>
-<select id="pcSelect">
-    <option value="pc1">PC 1</option>
-</select>
-<button id="checkStatusBtn">Verificar Estado</button>
+<body class="management-body">
 
-<p id="statusResult">Estado: Desconocido</p>
+    <!-- Contenido de la pestaña Management -->
+    <div class="management-content">
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/dash.js"></script>
+        <!-- Titulo de la pagina -->
+        <h2 class="management-title-text">RControl</h2>
 
+        <br>
+        <br>
+
+        <!-- Subtitulo de la pagina -->
+        <h3 class="management-subtitle-text">Gestión de Computadoras</h3>
+
+        <br>
+        
+        <!-- Texto Computadoras Activas -->
+        <h3 class="management-active-pc-text">Computadoras Activas</h4>
+            
+        <br>
+        <br>
+
+        <!-- Caja contenedora de los estados de las computadoras -->
+        <div class="computer-status-container">
+
+            <!-- Contenedor de computadora 1 -->
+            <div id="container-pc">
+
+                <!-- El contenido del contenedor de la pc 1 -->
+                <div class="container-pc-content">
+
+                    <!-- Icono visual de la que representa una laptop -->
+                    <div class="container-pc-logo-image"><i class="fa-solid fa-laptop"></i></div>
+
+                    <!-- Contenedor de texto  -->
+                    <div class="pc-content-text-container">
+
+                        <!-- Nombre de la computadora -->
+                        <h3 class="pc-name-text">Laptop 1</h3>
+
+                        <!-- Texto de estado pc -->
+                        <p class="pc-subtitle-text">Estado: Desconocido</p>
+
+                        <!-- Lista de opciones disponibles para la accion de apagar -->
+                        <select class="pc-button manage" id="buttonList">
+                            <option value="shutdown-now">Apagar</option>
+                            <option id="timer" value="shutdown-timer">Temporizador</option>
+
+
+                        </select>
+                        <!-- Boton para obtener detalles -->
+                        <button class="pc-button details">Verificar</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <!-- Contenedor de computadora 2 -->
+            <div id="container-pc">
+                <!-- El contenido del contenedor de la pc 2 -->
+                <div class="container-pc-content">
+
+                    <!-- Icono visual de la que representa una laptop -->
+                    <div class="container-pc-logo-image"><i class="fa-solid fa-laptop"></i></div>
+
+                    <!-- Contenedor de texto  -->
+                    <div class="pc-content-text-container">
+
+                        <!-- Nombre de la computadora -->
+                        <h3 class="pc-name-text">Laptop 2</h3>
+
+                        <!-- Texto de estado pc -->
+                        <p class="pc-subtitle-text">Estado: Desconocido</p>
+
+                        <!-- Lista de opciones disponibles para la accion de apagar -->
+                        <select class="pc-button manage" id="buttonList">
+                            <option value="shutdown-now">Apagar</option>
+                            <option id="timer" value="shutdown-timer">Temporizador</option>
+
+
+                        </select>
+                        <!-- Boton para obtener detalles -->
+                        <button class="pc-button details">Verificar</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Contenedor de computadora 3 -->
+            <div id="container-pc">
+                <!-- El contenido del contenedor de la pc 3 -->
+                <div class="container-pc-content">
+
+                    <!-- Icono visual de la que representa una laptop -->
+                    <div class="container-pc-logo-image"><i class="fa-solid fa-laptop"></i></div>
+
+                    <!-- Contenedor de texto  -->
+                    <div class="pc-content-text-container">
+
+                        <!-- Nombre de la computadora -->
+                        <h3 class="pc-name-text">Laptop 3</h3>
+
+                        <!-- Texto de estado pc -->
+                        <p class="pc-subtitle-text">Estado: Desconocido</p>
+
+                        <!-- Lista de opciones disponibles para la accion de apagar -->
+                        <select class="pc-button manage" id="buttonList">
+                            <option value="shutdown-now">Apagar</option>
+                            <option id="timer" value="shutdown-timer">Temporizador</option>
+
+
+                        </select>
+                        <!-- Boton para obtener detalles -->
+                        <button class="pc-button details">Verificar</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Contenedor de computadora 4 -->
+            <div id="container-pc">
+                <!-- El contenido del contenedor de la pc 4 -->
+                <div class="container-pc-content">
+
+                    <!-- Icono visual de la que representa una laptop -->
+                    <div class="container-pc-logo-image"><i class="fa-solid fa-laptop"></i></div>
+
+                    <!-- Contenedor de texto  -->
+                    <div class="pc-content-text-container">
+
+                        <!-- Nombre de la computadora -->
+                        <h3 class="pc-name-text">Laptop 4</h3>
+
+                        <!-- Texto de estado pc -->
+                        <p class="pc-subtitle-text">Estado: Desconocido</p>
+
+                        <!-- Lista de opciones disponibles para la accion de apagar -->
+                        <select class="pc-button manage" id="buttonList">
+                            <option value="shutdown-now">Apagar</option>
+                            <option id="timer" value="shutdown-timer">Temporizador</option>
+
+
+                        </select>
+                        <!-- Boton para obtener detalles -->
+                        <button class="pc-button details">Verificar</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+        <br>
+        <br>
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/js/dash.js"></script>
+
+
+    </div>
+
+
+    <!-- Pie de pagina -->
+    <footer class="pie-pagina">
+        <button class="pc-button all-shutdown-btn">Apagar Todos</button>
+        <button class="pc-button all-program-shutdown">Temporizador Todos</button>
+    </footer>
+
+
+    
 </body>
 </html>

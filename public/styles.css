@@ -1,11 +1,13 @@
 
-/* Configuraciones del cuerpo de la pestaña login */
-.login-body{
-    margin: 0px;
-    padding: 0px;
+/* Afecta ambas pestañas de toda la pagina */
+*{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    user-select: none;
+    padding: 0px;
 }
 
+/* ---------------------------- LOGIN PAGE ------------------------------- */ 
 /* Posicion del contenido del cuerpo (Aplicar Margen de 10 de la altura del viewport) */
 .login-content{
     margin-top: 10vh;
@@ -121,8 +123,162 @@
     opacity: 0.5;
 }
 
+/* Texto del link de forgot password [Cuando ya lo has visitado] */
 .forgot-password-text:visited{
     color: #3295ff;
+}
+
+
+
+
+/* ---------------------------- MANAGEMENT PAGE ------------------------------- */ 
+
+
+/* Configruaciones del cuerpo de la pestaña Management */
+.management-content{
+    margin-top: 4vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    
+}
+
+/* Titulo del texto de la pagina management */
+.management-title-text{
+    color: #3295ff;
+    font-size: 40px;
+}
+
+/* Subtitulo del texto de la pagina management */
+.management-subtitle-text{
+    font-size: 30px;
+}
+
+
+/* Subtitulo texto de computadoras activas */
+.management-active-pc-text{
+    color: #3295ff;
+}
+
+/* Contenedor general de estatus de computadoras */
+.computer-status-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 50vh;
+}
+
+/* Contenedor de cada pc */
+#container-pc{
+    width: 20%;
+    display: flex;
+    border-radius: 30px;
+    margin-left: 3.8%;
+    height: 65%;
+    transition: all 0.3s;
+    background-color: #bab4d046;
+    
+}
+
+
+/* Contenido de la caja que representa a una sola pc */
+.container-pc-content{
+    width: 100%;
+    margin: 10px;
+}
+
+/* Contenedor que tendrá el logo visual de la laptop */
+.container-pc-logo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 35%;
+    background-color: #b39ef730;
+    border-radius: 100%;
+}
+
+/* Logo visual de la laptop */
+.container-pc-logo-image i{
+    font-size: 50px;
+    color: #3295ff;
+}
+
+/* Contenido del texto en las cajas de cada pc */
+.pc-content-text-container{
+    width: 99%;
+    height: 62%;
+}
+
+/* Texto del nombre de la pc */
+.pc-name-text{
+    font-size: 30px;
+    margin-left: 5%;
+}
+
+/* Subtitulo del texto pc */
+.pc-subtitle-text{
+    margin-top: 15px;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+/* Botones de las cajas representativas de pc */
+.pc-button{
+    margin-top: 7%;
+    margin-left: 20px;
+    font-size: 15px;
+    height: 55px;
+    transition: all 0.3s;
+    font-weight: 600;
+    padding: 1px 5%;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* Este estilo adicional pertenece al boton que se llama Gestionar */
+.manage{
+    background-color: #3295ff;
+    color: white;
+}
+
+
+
+/* Este estilo adicional pertenece al boton que se llama Detalles */
+.details{
+    background-color: #b39ef730;
+    color: #3295ff;
+}
+
+/* Botones de las cajas representativas de pc [Cuando les haces hover]  */
+.pc-button:hover{
+    opacity: 0.5;
+}
+
+/* Configuracion de pie de pagina */
+.pie-pagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 10vh;
+}
+
+/* Configuracion para botones de pie de pagina [Shutdown All] */
+.all-shutdown-btn{
+    margin-top: 0px;
+    padding: 1px 2%;;
+    color: white;
+    background-color: #ff3232;
+}
+
+.all-program-shutdown{
+    margin-top: 0px;
+    padding: 1px 2%;;
+    color: white;
+    background-color: #ffab35;
 }
 
 
@@ -130,7 +286,7 @@
 /* ------------------------------------------------------------------------- */
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
